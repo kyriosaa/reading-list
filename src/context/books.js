@@ -8,7 +8,7 @@ function Provider({ children }) {
 
   const handleFetchBooks = async () => {
     const response = await axios.get(
-      "https://reading-list-lemon.vercel.app/books"
+      "https://localhost:3001/books"
     );
 
     setBooks(response.data);
@@ -16,7 +16,7 @@ function Provider({ children }) {
 
   const editBookById = async (id, newTitle) => {
     const response = await axios.put(
-      `https://reading-list-lemon.vercel.app/books/${id}`,
+      `https://localhost:3001/books/${id}`,
       {
         title: newTitle,
       }
@@ -34,7 +34,7 @@ function Provider({ children }) {
   };
 
   const deleteBookById = async (id) => {
-    await axios.delete(`https://reading-list-lemon.vercel.app/books/${id}`);
+    await axios.delete(`https://localhost:3001/books/${id}`);
 
     const updatedBooks = books.filter((book) => {
       return book.id !== id;
@@ -45,7 +45,7 @@ function Provider({ children }) {
 
   const handleCreateBook = async (title) => {
     const response = await axios.post(
-      "https://reading-list-lemon.vercel.app/books",
+      "https://localhost:3001/books",
       {
         title: title,
       }
