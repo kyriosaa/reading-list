@@ -1,4 +1,4 @@
-# Reading List Website (WIP)
+# Reading List Website
 
 **Description**
 
