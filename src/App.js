@@ -4,9 +4,7 @@ import BookList from "./components/BookList";
 import BooksContext from "./context/books";
 
 function App() {
-<<<<<<< HEAD
   const { handleFetchBooks } = useContext(BooksContext);
-=======
   const [books, setBooks] = useState([]);
 
   const handleFetchBooks = async () => {
@@ -14,14 +12,11 @@ function App() {
 
     setBooks(response.data);
   };
->>>>>>> fa837dd59ba93d7b83f03129066f2e52f8bdec0f
 
   useEffect(() => {
     handleFetchBooks();
   }, []);
 
-<<<<<<< HEAD
-=======
   const editBookById = async (id, newTitle) => {
     const response = await axios.put(`http://reading-list-lemon.vercel.app/books/${id}`, {
       title: newTitle,
@@ -57,7 +52,6 @@ function App() {
     setBooks(updatedBooks);
   };
 
->>>>>>> fa837dd59ba93d7b83f03129066f2e52f8bdec0f
   return (
     <div className="app">
       <h1>Reading List</h1>
